@@ -17,7 +17,6 @@ spec:
         image: cloudflare/cloudflared:latest
         args:
         - tunnel
-
         # Points cloudflared to the config file, which configures what
         # cloudflared will actually do. This file is created by a ConfigMap
         # below.
@@ -78,7 +77,7 @@ data:
 
     ingress:
     - hostname: ldpi.spenceramp.net
-      service: http://linkding:9090
+      service: http://linkding-svc:9090
 
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
