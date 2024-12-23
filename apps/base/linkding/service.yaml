@@ -8,6 +8,6 @@ spec:
   selector: 
     app: linkding
   ports:
-    - NodePort: 30003
+    - nodePort: 30003
       port: 80
       targetPort: 9090
